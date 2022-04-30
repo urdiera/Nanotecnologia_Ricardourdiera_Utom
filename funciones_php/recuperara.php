@@ -33,18 +33,18 @@
                     //Server settings
                     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                     $mail->isSMTP();                                            //Send using SMTP
-                    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                    $mail->Host       = 'nanotecnologiaricardourdiera.com.desarrollo-de-sw-utom.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;
                     ///correo existente                                   //Enable SMTP authentication
-                    $mail->Username   = 'ricardourdiera@gmail.com';
+                    $mail->Username   = 'ricardourdiera@nanotecnologiaricardourdiera.com.desarrollo-de-sw-utom.com';
                     ///contraceña correcta                      //SMTP username
-                    $mail->Password   = 'Papu1234';                               //SMTP password
+                    $mail->Password   = '4]DAL#9MDmCZ';                               //SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                 
                     //Recipients
                     //aque correo lo vas a mandar 
-                    $mail->setFrom('ricardourdiera@gmail.com', 'Dormunt');
+                    $mail->setFrom('ricardourdiera@nanotecnologiaricardourdiera.com.desarrollo-de-sw-utom.com', 'Dormunt');
                     $mail->addAddress($correo, $nombre);     //Add a recipient
                     //$mail->addAddress('ellen@example.com');               //Name is optional
                     //$mail->addReplyTo('info@example.com', 'Information');
@@ -59,7 +59,7 @@
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = 'Recuperar Password en Dormunt';
                     //cambiar la url cuando se suba al hosting
-                    $mail->Body  = '<h3> Para recuperar tu contraseña deves de seguir las siguientes indicaciones </h3> <ul> <li> Dale click al enlace:  <b> <a href= "http://localhost:8080/Nanotecnologia/new_password.php ?token='.$token.'"> Aqui </li> <li>Guarda tu contraceña en el sitio. </li> <li>Inicia session nuevamente</li></ul>    </b>';
+                    $mail->Body  = '<h3> Para recuperar tu contraseña deves de seguir las siguientes indicaciones </h3> <ul> <li> Dale click al enlace:  <b> <a href= "http://nanotecnologiaricardourdiera.com.desarrollo-de-sw-utom.com/new_password.php?token='.$token.'"> Aqui </li> <li>Guarda tu contraceña en el sitio. </li> <li>Inicia session nuevamente</li></ul>    </b>';
                     $mail->AltBody = 'Este es un correo de Dormunt para recuperar tu contraseña';
                 
                     $mail->send();
